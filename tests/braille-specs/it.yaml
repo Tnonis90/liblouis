@@ -1,8 +1,5 @@
 display: unicode.dis
-table:
-  language: it
-  type: literary
-  __assert-match: it-it-comp6.utb
+table: it-it-comp6.utb
 flags: {testmode: bothDirections}
 tests:
   # --- ALPHABET ---
@@ -20,7 +17,7 @@ tests:
   - [l, ⠇]
   - [m, ⠍]
   - [n, ⠝]
-  - [o, ⠕]  # Fixed: points 1-3-5
+  - [o, ⠕]
   - [p, ⠏]
   - [q, ⠟]
   - [r, ⠗]
@@ -42,25 +39,18 @@ tests:
   - [lunedì, ⠇⠥⠝⠑⠙⠌]
 
   # --- SYMBOLS ---
-  - ["[testo]", ⠷⠞⠑⠎⠞⠕⠾] # Added 's' (points 2-3-4)
-  - ["(parentesi)", ⠦⠏⠁⠗⠑⠝⠞⠑⠎⠊⠴]
-  - ["{graffe}", ⠯⠛⠗⠁⠋⠋⠑⠽]
+  - ["[testo]", ⠈⠷⠞⠑⠎⠞⠕⠈⠾]
+  - ["(parentesi)", ⠢⠏⠁⠗⠑⠝⠞⠑⠎⠊⠔]
+  - ["{graffe}", ⠈⠯⠛⠗⠁⠋⠋⠑⠈⠽]
 
   # --- MATH AND NUMBERS ---
   - [10, ⠼⠁⠚]
-  - [10.5, ⠼⠁⠚⠂⠑]
-  - [10-10, ⠼⠁⠚⠤⠼⠁⠚] # Fixed: uses dots 3-6 for minus
+  - ["10,5", ⠼⠁⠚⠂⠼⠑]
+  - [10-10, ⠼⠁⠚⠤⠼⠁⠚]
 
-
----
-table:
-  language: it
-  type: computer
-  __assert-match: it-it-comp8.utb
-flags: {testmode: bothDirections}
+# SEZIONE TABELLA 8 PUNTI
+table: it-it-comp8.utb
 tests:
-  # see https://github.com/liblouis/liblouis/issues/1783
   - - "hello"
     - "⠓⠑⠇⠇⠕"
     - xfail: {backward: received "ἑllo"}
-

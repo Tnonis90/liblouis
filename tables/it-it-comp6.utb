@@ -116,12 +116,12 @@ prepunc ( 26
 postpunc " 356
 postpunc ) 35
 punctuation ' 3
-punctuation [ 12356
-prepunc [ 12356
-punctuation ] 23456
-postpunc ] 23456
-punctuation { 12346
-punctuation } 13456
+punctuation [ 4-12356
+prepunc [ 4-12356
+punctuation ] 4-23456
+postpunc ] 4-23456
+punctuation { 4-12346
+punctuation } 4-13456
 
 # --- Math and operators ---
 math + 235
@@ -134,6 +134,7 @@ math ) 35
 math \x00F7 25
 math \x003c 5-126
 math \x003e 5-345
+decpoint , 2
 
 # --- Other signs ---
 noback sign \x201E 56
