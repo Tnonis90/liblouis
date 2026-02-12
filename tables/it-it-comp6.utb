@@ -30,7 +30,6 @@
 #+direction:both
 
 # --- Includes and spaces ---
-include spaces.uti
 include latinLetterDef6Dots.uti
 include braille-patterns.cti
 
@@ -41,6 +40,8 @@ space \x007f 0
 undefined 0
 
 display \s 0
+include spaces.uti
+
 display @ 345
 display ó 346
 
