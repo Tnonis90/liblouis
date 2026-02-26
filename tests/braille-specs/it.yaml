@@ -51,6 +51,7 @@ tests:
 # SEZIONE TABELLA 8 PUNTI
 table: it-it-comp8.utb
 tests:
+  # see https://github.com/liblouis/liblouis/issues/1783
   - - "hello"
     - "⠓⠑⠇⠇⠕"
     - xfail: {backward: received "ἑllo"}
