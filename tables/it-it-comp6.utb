@@ -26,7 +26,7 @@
 #+type:literary
 #+contraction:no
 #+dots:6
-#+system:biblioteca-di-monza
+#+system:Biblioteca-di-monza (https://www.bibliotecaciechi.it/wp-content/uploads/2022/03/Codice_Braille.pdf)
 #+direction:both
 
 # --- Includes and spaces ---
@@ -210,10 +210,4 @@ begemph bold 2356-456
 endemph bold 456-2356
 begemph italic 25-456
 endemph italic 456-25
-
-# --- Science ---
-word æchmea 345-14-125-134-15-1
-word ægithale 345-1245-24-2345-125-1-123-15
-#word vitæ 1236-24-2345-345
-word Länder 46-123-345-1345-145-15-1235
 
