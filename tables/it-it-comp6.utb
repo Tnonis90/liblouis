@@ -149,7 +149,7 @@ sign \xFE58 36
 word — 456-36
 word – 36-36
 sign \x2022 246-135
-sign \x2026 256-256-256
+sign \x2026 3-3-3
 sign \x25cf 35
 sign \\ 5-34
 sign @ 345
@@ -210,34 +210,12 @@ begemph bold 2356-456
 endemph bold 456-2356
 begemph italic 25-456
 endemph italic 456-25
+begemph underline 36-456
+endemph underline 456-36
+
 #Currency
 sign ¢ 4-14						cent sign																	x00A2
 sign £ 45-123					pound sign																x00A3
 sign ¤ 45-15					currency sign															x00A4
 sign ¥ 45-13456				yen	sign																	x00A5
 
-#Special character sequences
-literal :// URLs
-literal www.
-
-literal .com
-literal .edu
-literal .gov
-literal .mil
-literal .net
-literal .org
-
-literal .doc
-literal .htm
-literal .html
-literal .tex
-literal .txt
-
-literal .gif
-literal .jpg
-literal .png
-literal .wav
-
-literal .tar
-literal .zip
-always ... 3-3-3
