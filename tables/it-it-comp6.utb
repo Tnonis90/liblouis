@@ -26,7 +26,8 @@
 #+type:literary
 #+contraction:no
 #+dots:6
-#+system:Biblioteca-di-monza (https://www.bibliotecaciechi.it/wp-content/uploads/2022/03/Codice_Braille.pdf)
+#+system:biblioteca-di-monza
+# https://www.bibliotecaciechi.it/wp-content/uploads/2022/03/Codice_Braille.pdf
 #+direction:both
 
 # --- Includes and spaces ---
