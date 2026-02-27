@@ -1578,7 +1578,9 @@ syllableBreak(const TranslationTableHeader *table, int pos, const InString *inpu
 		free(hyphens);
 		return 0;
 	}
-	for (k = pos - wordStart + 1; k < (pos - wordStart + transCharslen); k++)
+	int limit = pos - wordStart + transCharslen;
+	if (limit > wordSize) limit = wordSize;
+	for (k = pos - wordStart + 1; k < limit; k++)
 		if (hyphens[k] & 1) {
 			free(hyphens);
 			return 1;
@@ -2160,16 +2162,22 @@ for_selectRule(const TranslationTableHeader *table, int pos, OutString output,
 							break;
 						case CTO_SuffixableWord:
 							if (dontContract || (mode & noContractions)) break;
-							if ((beforeAttributes & (CTC_Space | CTC_Punctuation)) &&
+							if ((beforeAttributes &
+										(CTC_Space | CTC_Punctuation |
+												CTC_SeqDelimiter)) &&
 									(afterAttributes &
-											(CTC_Space | CTC_Letter | CTC_Punctuation)))
+											(CTC_Space | CTC_Letter | CTC_Punctuation |
+													CTC_SeqDelimiter)))
 								return;
 							break;
 						case CTO_PrefixableWord:
 							if (dontContract || (mode & noContractions)) break;
 							if ((beforeAttributes &
-										(CTC_Space | CTC_Letter | CTC_Punctuation)) &&
-									(afterAttributes & (CTC_Space | CTC_Punctuation)))
+										(CTC_Space | CTC_Letter | CTC_Punctuation |
+												CTC_SeqDelimiter)) &&
+									(afterAttributes &
+											(CTC_Space | CTC_Punctuation |
+													CTC_SeqDelimiter)))
 								return;
 							break;
 						case CTO_BegWord:

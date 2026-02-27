@@ -231,6 +231,7 @@ dist_yaml_TESTS =				\
 	yaml/emphasis.yaml			\
 	yaml/example_test.yaml			\
 	yaml/face-with-tears-of-joy.yaml        \
+	yaml/issue-1863-basechar-finalize.yaml	\
 	yaml/hyphenation.yaml			\
 	yaml/hyphenation_nocross_harness.yaml	\
 	yaml/inpos_outpos.yaml			\
@@ -255,6 +256,7 @@ dist_yaml_TESTS =				\
 	yaml/present_progressive.yaml		\
 	yaml/repword.yaml			\
 	yaml/squash_space.yaml			\
+	yaml/sufword_prfword.yaml		\
 	yaml/syllable.yaml			\
 	yaml/undefined.yaml			\
 	yaml/various-regression-tests.yaml

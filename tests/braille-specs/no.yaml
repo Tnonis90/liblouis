@@ -1,6 +1,6 @@
 # Tests for Norwegian braille
 #
-# Copyright © 2009-2010, 2012-2013, 2017, 2019, 2021-2022, 2025 Lars Bjørndal <lars@lamasti.net>
+# Copyright © 2009-2010, 2012-2013, 2017, 2019, 2021-2022, 2025-2026 Lars Bjørndal <lars@lamasti.net>
 # Copyright © 2015,2021 NLB Norwegian library of talking books and braille, http://www.nlb.no/
 # Copyright © 2020 by Bert Frees
 #
@@ -1563,7 +1563,8 @@ tests:
   - [⠇⠁⠗⠎⠈⠇⠁⠍⠁⠎⠞⠊⠄⠝⠑⠞, lars@lamasti.net ]
   - [⠠⠧⠊⠀⠎⠞⠡⠗⠀⠊⠀⠅⠪⠄, Vi står i kø.]
   - ['⠠⠑⠝⠀⠃⠗⠕⠂', 'En bro,']
-  # - [⠒⠤⠴' ':-)']
+  - ['⠰⠖', '+']
+  - [⠒⠤⠴, ':-)']
 
 flags: {testmode: bothDirections}
 tests:
@@ -1662,7 +1663,7 @@ tests:
   - [Utakk er verdens lønn., ⠠⠥⠞⠅ ⠱ ⠧⠑⠗⠙⠣⠎ ⠇⠪⠝⠝⠄]
   - [på'n igjen, ⠏⠐⠰⠝ ⠊⠛⠚⠣, xfail: {backward: true}]
   - [b/c- og/eller c-forkorting, ⠰⠃⠌⠰⠉⠤ ⠉⠌⠑ ⠰⠉⠤⠫⠅⠕⠗⠞⠊⠝⠛, xfail: {backward: true}]
-  - [https://punktskriftutvalget.no, ⠓⠞⠞⠏⠎⠒⠌⠌⠏⠥⠝⠅⠞⠎⠅⠗⠊⠋⠞⠥⠞⠧⠁⠇⠛⠑⠞⠄⠝⠕]
+  - ["https://punktskriftutvalget.no", ⠓⠞⠞⠏⠎⠒⠌⠌⠏⠥⠝⠅⠞⠎⠅⠗⠊⠋⠞⠥⠞⠧⠁⠇⠛⠑⠞⠄⠝⠕]
   - [tips@dn.no, ⠞⠊⠏⠎⠈⠙⠝⠄⠝⠕]
   - [m, ⠰⠍]
   - [km, ⠰⠅⠍]
@@ -1679,12 +1680,13 @@ tests:
   - [heldigital, ⠓⠑⠇⠙⠊⠛⠊⠞⠁⠇]
   - [for/bak, ⠫⠌⠃⠁⠅]
   - [mellom, ⠍⠇]
+  - [foroverbøyd, ⠫⠭⠃⠪⠽⠙]
 
 flags: {testmode: forward}
 
 tests:
   - [<tips@dn.no>, ⠣⠞⠊⠏⠎⠈⠙⠝⠄⠝⠕⠜]
-  - [<https://bt.no>, ⠣⠓⠞⠞⠏⠎⠒⠌⠌⠃⠞⠄⠝⠕⠜]
+  - ["<https://bt.no>", ⠣⠓⠞⠞⠏⠎⠒⠌⠌⠃⠞⠄⠝⠕⠜]
 
 
 flags: {testmode: backward}

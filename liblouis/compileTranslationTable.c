@@ -4354,7 +4354,11 @@ lou_readCharFromFile(const char *fileName, int *mode) {
 	 * ASCII8 */
 	int ch;
 	static FileInfo file;
-	if (fileName == NULL) return 0;
+
+	/* Check for NULL pointers before dereferencing.
+	 * This prevents segmentation faults when invalid arguments are passed. */
+	if (fileName == NULL || mode == NULL) return EOF;
+
 	if (*mode == 1) {
 		*mode = 0;
 		file.fileName = fileName;
@@ -4385,6 +4389,7 @@ finalizeCharacter(TranslationTableHeader *table, TranslationTableOffset characte
 		int detect_loop) {
 	TranslationTableCharacter *character =
 			(TranslationTableCharacter *)&table->ruleArea[characterOffset];
+	if (character->finalized) return character;
 	if (character->basechar) {
 		TranslationTableOffset basecharOffset = 0;
 		TranslationTableCharacter *basechar = character;
@@ -4849,6 +4854,10 @@ copyStringArray(char **array) {
 
 char **EXPORT_CALL
 _lou_resolveTable(const char *tableList, const char *base) {
+	if (!tableResolver) {
+		_lou_logMessage(LOU_LOG_ERROR, "Table resolver is not set");
+		return NULL;
+	}
 	char **tableFiles = (*tableResolver)(tableList, base);
 	char **result = copyStringArray(tableFiles);
 	if (tableResolver == &_lou_defaultTableResolver) lou_freeTableFiles(tableFiles);
@@ -4864,6 +4873,10 @@ _lou_resolveTable(const char *tableList, const char *base) {
 void EXPORT_CALL
 lou_registerTableResolver(
 		char **(EXPORT_CALL *resolver)(const char *tableList, const char *base)) {
+	if (!resolver) {
+		_lou_logMessage(LOU_LOG_ERROR, "Cannot register a NULL table resolver");
+		return;
+	}
 	tableResolver = resolver;
 }
 
