@@ -197,11 +197,10 @@ noback lowercase \x03C8 45-13456
 noback lowercase \x03C9 45-2456
 
 # ---Caps and base ---
-base uppercase \x0391 \x03b1
-base uppercase \x03A9 \x03C9
 capsletter 46
 begcapsword 46-46
 endcapsword 6-3
+
 
 # --- Emphasis ---
 emphclass italic
@@ -211,4 +210,34 @@ begemph bold 2356-456
 endemph bold 456-2356
 begemph italic 25-456
 endemph italic 456-25
+#Currency
+sign ¢ 4-14						cent sign																	x00A2
+sign £ 45-123					pound sign																x00A3
+sign ¤ 45-15					currency sign															x00A4
+sign ¥ 45-13456				yen	sign																	x00A5
 
+#Special character sequences
+literal :// URLs
+literal www.
+
+literal .com
+literal .edu
+literal .gov
+literal .mil
+literal .net
+literal .org
+
+literal .doc
+literal .htm
+literal .html
+literal .tex
+literal .txt
+
+literal .gif
+literal .jpg
+literal .png
+literal .wav
+
+literal .tar
+literal .zip
+always ... 3-3-3
