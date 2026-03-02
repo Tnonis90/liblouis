@@ -21,12 +21,24 @@
 #  License along with liblouis. If not, see
 #  <http://www.gnu.org/licenses/>.
 
+<<<<<<< HEAD
 #+language: it
 #+type: literary
 #+contraction: no
 #+dots: 6
 #+direction: both
 
+=======
+#-index-name: Italian
+#-display-name: Italian braille
+
+#+language: it
+#+type: literary
+#+contraction: no
+#+dots: 6
+#+direction: both
+
+>>>>>>> 8b7073c29dd66f6a34e88679cf063f84d3b6613e
 # The standard that this table follows is the one published by the Monza library
 # (Biblioteca di Monza):
 # https://www.bibliotecaciechi.it/wp-content/uploads/2022/03/Codice_Braille.pdf
