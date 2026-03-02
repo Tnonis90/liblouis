@@ -1,7 +1,26 @@
-display: unicode.dis
-table: it-it-comp6.utb
+# Tests for Italian
+#
+# Copyright © 2025 by Bert Frees
+# Copyright © 2026 by Vision Dept SRL. <info@visiondept.it>
+#
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved. This file is offered as-is,
+# without any warranty.
+#
+# ----------------------------------------------------------------------------------------------
+
+display: |
+  include unicode-without-blank.dis
+  display 9 9
+  display a a
+table:
+  language: it
+  type: literary
+  __assert-match: it.tbl # it-it-comp6.utb
 flags: {testmode: bothDirections}
 tests:
+
   # --- ALPHABET ---
   - [a, ⠁]
   - [b, ⠃]
@@ -48,8 +67,17 @@ tests:
   - ["10,5", ⠼⠁⠚⠂⠼⠑]
   - [10-10, ⠼⠁⠚⠤⠼⠁⠚]
 
+  # --- SPACES ---
+  - ['\x0020', '\x0020']
+  - ['\x00a0', 'a']
+  - ['\x0009', '9']
+
 # SEZIONE TABELLA 8 PUNTI
-table: it-it-comp8.utb
+table:
+  language: it
+  type: computer
+  __assert-match: it-it-comp8.utb
+flags: {testmode: bothDirections}
 tests:
   # see https://github.com/liblouis/liblouis/issues/1783
   - - "hello"

@@ -401,14 +401,6 @@ tests:
   - ['\x000b', '\x0020']
   - ['\x000c', '\x0020']
   - ['\x000d', '\x0020']
-table: en-gb-comp8.ctb,spaces.uti
-flags: {testmode: bothDirections}
-tests:
-  - ['\x0009', '9']
-  - ['\x000a', '⣚']
-  - ['\x000d', '⣍']
-  - ['\x0020', '\x0020']
-  - ['\x00a0', 'a']
 table: en-gb-g1.utb
 flags: {testmode: bothDirections}
 tests:
@@ -913,12 +905,6 @@ tests:
   - ['\x2009', '\x0020']
   - ['\x200a', '\x0020']
   - ['\x202f', '\x0020']
-table: it.tbl
-flags: {testmode: bothDirections}
-tests:
-  - ['\x0020', '\x0020']
-  - ['\x00a0', 'a']
-  - ['\x0009', '9']
 table: iu-ca-g1.ctb
 flags: {testmode: bothDirections}
 tests:
