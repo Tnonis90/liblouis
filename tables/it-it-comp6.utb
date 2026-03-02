@@ -5,7 +5,6 @@
 #  Copyright (C) 2012 Mesar Hameed <mesar.hameed@gmail.com>
 #
 #  Copyright (C) 2026 Vision Dept SRL. <info@visiondept.it>
-
 #  This file is part of liblouis.
 #
 #  liblouis is free software: you can redistribute it and/or modify it
@@ -21,7 +20,6 @@
 #  You should have received a copy of the GNU Lesser General Public
 #  License along with liblouis. If not, see
 #  <http://www.gnu.org/licenses/>.
-
 #+language:it
 #+type:literary
 #+contraction:no
@@ -30,19 +28,15 @@
 # https://www.bibliotecaciechi.it/wp-content/uploads/2022/03/Codice_Braille.pdf
 #+direction:both
 
-# --- Includes and spaces ---
 include latinLetterDef6Dots.uti
 include braille-patterns.cti
-
 space \t 9 tab
 space \x001B 1b      # escape
 space \x00A0 a       # no-break space
 space \x007f 0
 undefined 0
-
 display \s 0
 include spaces.uti
-
 display @ 345
 display ó 346
 
@@ -147,8 +141,6 @@ sign ² 4-6-126
 sign ³ 4-6-146
 sign ¹ 4-6-16
 punctuation » 356
-
-
 noback sign \x201E 56
 noback sign \x200e 0
 noback sign \x200f 0
@@ -210,7 +202,6 @@ noback lowercase \x03C9 45-2456
 capsletter 46
 begcapsword 46-46
 endcapsword 6-3
-
 
 # --- Emphasis ---
 emphclass italic
