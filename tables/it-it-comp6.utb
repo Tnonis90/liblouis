@@ -23,6 +23,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #+language: it
 #+type: literary
 #+contraction: no
@@ -51,6 +52,17 @@
 #+direction: both
 
 >>>>>>> adf34883d29303f36d7bff3c53c043757c1dbc22
+=======
+#-index-name: Italian
+#-display-name: Italian braille
+
+#+language: it
+#+type: literary
+#+contraction: no
+#+dots: 6
+#+direction: both
+
+>>>>>>> e3d213a957116221fab571cd840883de2bdcbda8
 # The standard that this table follows is the one published by the Monza library
 # (Biblioteca di Monza):
 # https://www.bibliotecaciechi.it/wp-content/uploads/2022/03/Codice_Braille.pdf
