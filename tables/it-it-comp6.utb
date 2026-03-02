@@ -139,6 +139,16 @@ math \x003e 5-345
 decpoint , 2
 
 # --- Other signs ---
+#Some of these were ported from the old Italian table
+sign ~ 2346
+sign ¢ 4-14
+sign § 234-234
+sign ² 4-6-126
+sign ³ 4-6-146
+sign ¹ 4-6-16
+punctuation » 356
+
+
 noback sign \x201E 56
 noback sign \x200e 0
 noback sign \x200f 0
@@ -163,7 +173,7 @@ sign \x007C 456
 sign \x0083 124
 sign \x2122 5-2345
 sign © 5-14
-sign ° 5-135
+sign ° 356
 sign & 5-12346
 sign € 45-15
 sign $ 45-234
